@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonService } from '../../services/common.service';
 import { Common2Service } from '../../services/common2.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-test',
-  imports: [],
+  imports: [MatCardModule, MatButtonModule],
   templateUrl: './test.component.html',
   styleUrl: './test.component.scss'
 })
