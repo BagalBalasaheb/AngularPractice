@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../../services/common.service';
+import { Common2Service } from '../../services/common2.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { CommonService } from '../../services/common.service';
 })
 export class HomeComponent implements OnInit {
   Value: string = 'home';
-  constructor(private commonService: CommonService) { }
+  constructor(private commonService: CommonService, private commonService2: Common2Service) { }
 
   ngOnInit(): void {
     this.commonService.readValue$.subscribe(data => {
@@ -17,8 +18,17 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  get Value2(): string{
+    return this.commonService2.value();
+  }
+
   onClick() {
     let temp = Math.random();
     this.commonService.changeValue(temp.toString());
+  }
+
+  onClick2() {
+    let temp = Math.random();
+    this.commonService2.changeValue(temp.toString());
   }
 }
