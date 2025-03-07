@@ -20,7 +20,7 @@ export class TestComponent {
     });
   }
 
-  get Value2(): string{
+  get Value2(): string {
     return this.commonService2.value();
   }
 
