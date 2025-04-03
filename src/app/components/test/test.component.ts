@@ -3,10 +3,11 @@ import { CommonService } from '../../services/common.service';
 import { Common2Service } from '../../services/common2.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { RedcolorDirective } from '../../redcolor.directive';
 
 @Component({
   selector: 'app-test',
-  imports: [MatCardModule, MatButtonModule],
+  imports: [MatCardModule, MatButtonModule, RedcolorDirective],
   templateUrl: './test.component.html',
   styleUrl: './test.component.scss'
 })
